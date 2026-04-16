@@ -1,0 +1,154 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color:white;
+    overflow-x:hidden;
+}
+
+/* NAV */
+nav{
+    display:flex;
+    justify-content:space-between;
+    padding:20px 50px;
+    position:fixed;
+    width:100%;
+    background:rgba(0,0,0,0.3);
+    backdrop-filter:blur(10px);
+}
+nav h1{color:#00f7ff;}
+nav a{
+    color:white;
+    margin-left:20px;
+    text-decoration:none;
+    transition:0.3s;
+}
+nav a:hover{color:#00f7ff;}
+/* LOGO */
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:#00f7ff;
+    font-weight:600;
+}
+
+.logo img{
+    height:50px;
+    width:auto;
+    object-fit:contain;
+    transition:0.3s;
+}
+
+/* Hover effect */
+.logo img:hover{
+    transform:scale(1.1);
+    filter:drop-shadow(0 0 8px #00f7ff);
+}
+
+/* HERO */
+.hero{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    text-align:center;
+}
+.hero h1{
+    font-size:3rem;
+}
+.hero span{
+    color:#00f7ff;
+}
+.typing{
+    margin-top:10px;
+    font-size:1.2rem;
+    border-right:2px solid white;
+    padding-right:5px;
+}
+
+/* SECTION */
+section{
+    padding:80px 50px;
+}
+h2{
+    text-align:center;
+    margin-bottom:40px;
+    color:#00f7ff;
+}
+
+/* ABOUT */
+.about-text{
+    text-align:center;
+    max-width:600px;
+    margin:auto;
+}
+
+/* SKILLS */
+.skills{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+.skill{
+    padding:15px 25px;
+    border:1px solid rgba(255,255,255,0.2);
+    border-radius:10px;
+    transition:0.3s;
+}
+.skill:hover{
+    box-shadow:0 0 15px #00f7ff;
+    transform:translateY(-5px);
+}
+
+/* PROJECTS */
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+.card{
+    padding:20px;
+    border-radius:15px;
+    background:rgba(255,255,255,0.05);
+    transition:0.3s;
+}
+.card:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 20px #00f7ff;
+}
+
+/* CONTACT */
+.contact{
+    text-align:center;
+}
+.contact input,
+.contact textarea{
+    width:80%;
+    margin:10px;
+    padding:10px;
+    border:none;
+    border-radius:5px;
+}
+.contact button{
+    padding:10px 20px;
+    border:none;
+    background:#00f7ff;
+    color:black;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:20px;
+    background:rgba(0,0,0,0.4);
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+<h1 class="logo">
+    <img src="logo.png" >
+</h1>
+
+<div>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+<div class="hero" id="home">
+<h1>Hi, I'm <span>Muhammed Aadhil mu</span></h1>
+<div class="typing" id="typing"></div>
+</div>
+
+<section id="about">
+<h2>About Me</h2>
+<p class="about-text">
+<ul>
+<li>I am Muhammed Aadhil M.U, a Computer Science Engineering student at KMEA Engineering College with a strong passion for technology and innovation. I enjoy building creative and functional digital experiences, especially in web development,software development,and some ai based web development <br></li>
+<li>
+
+I have hands-on experience in programming languages such as HTML, Python, C++, and basic JavaScript, with my core strengths in HTML and C++. I am particularly interested in working as a Machine Learning Engineer, Game Developer, or web Developer, where I can combine creativity with problem-solving to build impactful solutions.<br></li>
+
+<li>I am known for my problem-solving skills and creative thinking, and I continuously strive to improve by learning new technologies and concepts. Being a fast learner and a team player, I enjoy collaborating with others and adapting to new challenges quickly.<br></li>
+
+<li>My long-term goal is to work with leading tech companies like Google, NVIDIA, or Unreal Engine, contributing to innovative projects in software, gaming, or web technologies.<br></li>
+
+<li> of academics, I enjoy exploring new topics on YouTube and gaming, which helps me stay curious and inspired.<br></li>
+</ul>
+</p>
+</section>
+
+<section id="skills">
+<h2>Skills In</h2>
+<div class="skills">
+<div class="skill">HTML</div>
+<div class="skill">CSS</div>
+<div class="skill">JavaScript</div>
+<div class="skill">C++</div>
+</div>
+</section>
+
+<section id="projects">
+<h2>Projects</h2>
+<div class="projects">
+<div class="card">Project 1</div>
+<div class="card">Project 2</div>
+<div class="card">Project 3</div>
+</div>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<div class="contact">
+<input type="text" placeholder="Your Name"><br>
+<input type="email" placeholder="Email"><br>
+<textarea placeholder="Message"></textarea><br>
+<button>Send</button>
+</div>
+</section>
+
+<footer>
+© Muhammed Aadhil mu - portfolio 2024
+</footer>
+
+<script>
+// EFFECT
+const text = ["Web Developer.","Designer.","Creative Thinker."];
+let i=0, j=0, currentText="", isDeleting=false;
+
+function type(){
+    if(i < text.length){
+        if(!isDeleting && j <= text[i].length){
+            currentText = text[i].substring(0,j++);
+        } else if(isDeleting && j >= 0){
+            currentText = text[i].substring(0,j--);
+        }
+
+        document.getElementById("typing").innerHTML = currentText;
+
+        if(j == text[i].length){
+            isDeleting = true;
+            setTimeout(type,1000);
+            return;
+        } else if(j == 0){
+            isDeleting = false;
+            i++;
+            if(i == text.length) i=0;
+        }
+    }
+    setTimeout(type, isDeleting ? 50 : 100);
+}
+type();
+</script>
+
+</body>
+</html>
